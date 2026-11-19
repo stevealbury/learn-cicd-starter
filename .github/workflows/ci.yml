@@ -18,6 +18,12 @@ jobs:
         with:
           go-version: "1.27.1"
 
+      - name: Run tests
+        run: go test ./... -cover
+
+      - name: Security tests
+        run: gosec ./... 
+
 
   Style:
     name: Style
